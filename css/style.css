@@ -64,6 +64,8 @@
     width: auto;
     padding: 3rem;
     margin-bottom: 7rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
 
    }
    body .opcionales {
@@ -74,12 +76,39 @@
     width: auto;
     padding: 3rem;
     margin-bottom: 7rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
 
    }
 body .extras {
   padding: 2rem;
 }
 
+/* estilo Cotización */
+body .cotizacion {
+  flex-wrap: nowrap;
+  background: #9AC8E6;
+  margin: 1rem 15%;
+  height: auto;
+  width: auto;
+  padding-top: 3rem;
+  margin-bottom: 7rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+}
+
+#formulario {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  padding: 0.5em;
+  margin: 0.5em;
+
+}
+
+.anteojos {
+  height: auto;
+  width: 100%;
+}
   /* estilo Contacto */
 body .contacto {
     flex-wrap: nowrap;

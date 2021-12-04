@@ -202,7 +202,7 @@
                 <li>Embarque a las 12 del día, sábado 7 de agosto de 2021 en el puerto de San Antonio, ubicado a 20KM de Ibiza (25 min en auto)</li>
                 <li>Desembarque es en el mismo puerto de San Antonio a las 18:00 de día sábado 14 de agosto</li>
               </ul>
-              <a href="#" class="btn btn-primary">Cotizar</a>
+              <a href="#otrosservicios" class="btn btn-primary">Cotizar</a>
             </div>
           </div>
         </div>
@@ -218,7 +218,7 @@
                 <li>Embarque a las 12 del día, sábado 7 de agosto de 2021 en el puerto de Palma</li>
                 <li>Desembarque es en el mismo puerto de Palma a las 18:00 de día miercoles 18 de agosto</li>
               </ul>
-              <a href="#" class="btn btn-primary">Cotizar</a>
+              <a href="#otrosservicios" class="btn btn-primary">Cotizar</a>
             </div>
           </div>
         </div>
@@ -234,7 +234,7 @@
                 <li>Embarque a las 12 del día, sábado 7 de agosto de 2021 en el puerto de Alcudia, ubicado a 40KM de Palma (50 min en auto)</li>
                 <li>Desembarque es en el mismo puerto de Alcudia a las 18:00 de día sábado 14 de agosto</li>
               </ul>
-              <a href="#" class="btn btn-primary">Cotizar</a>
+              <a href="#otrosservicios" class="btn btn-primary">Cotizar</a>
             </div>
           </div>
         </div>
@@ -274,34 +274,55 @@
                 Stand up paddle por 2 horas: USD$ 35
               </label>
             </div>
-            <button type="submit" class="btn btn-primary">Agregar</button>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Ningún servicio extra
+              </label>
+            </div>
+            <a href="#simulador" class="btn btn-primary">Cotizar</a>
+            <!-- sección contacto
+            <button type="submit" class="btn btn-primary">Agregar</button> -->
           </div>
+        
           <div class="col-8"><img src="img/sup3.jpg" class="d-block w-100" alt="stand up paddle en el mar"></div>
           
         </div>
       </div>
-
-
-      <!-- reemplazo de prompt -->
-      <div>
-        Número de pasajeros
-        <input type="number" id="numPasajeros">
-        
-        Isla elegida
-        <input type="number" id="islaElegida">
-
-        Servicio escogido
-        <input type="number" id="servicioEscogido">
-
-        <div id="mensaje">
-    
-        </div>
-        <button onclick="mensajeFinal()">Enviar</button>
-        <button onclick="template()">Template</button>
-
-      </div>
-
     </section>
+
+
+<section id="simulador" class="cotizacion container opcionales">
+  <h2>Cotización</h2>
+
+  <p>Rellena con los datos para obtener tu cotización:</p>
+
+  <div id="cotizar">
+    <form id="formulario">
+      <p>Escribe el número de pasajeros (máximo 9):</p>
+      <input type="number"  placeholder="Número de pasajeros">
+      <br>
+      <br>
+      <p>Elige el número del destino: 1) Ibiza y Formentera, 2) Mallorca, 3) Menorca</p>
+      <input type="number"  placeholder="Número de isla elegida">
+      <br>
+      <br>
+      <p>Elige el número del servicio extra: 1) Pick-up ida y vuelta al aeropuerto: USD$ 50, 2) Tarde de buceo: USD$ 120, 3) Stand up paddle por 2 horas: USD$ 35, 4) Ningún servicio extra</p>
+      <input type="number" name="servicioEscogido" placeholder="Número de servicio elegido">
+      <input class="btn btn-primary" type="submit" value="enviar" >
+    </form>
+  </div>
+
+  <div id="imagenCotizar">
+    <img class="anteojos" src="img/anteojosplaya.jpg" alt="anteojos en la arena">
+ 
+  </div>
+
+  <!--
+  <div id="imagenCotizar"><img src="img/anteojosplaya.jpg" alt="foto de relleno"></div>
+-->
+  </section> 
+    
 
 
 
