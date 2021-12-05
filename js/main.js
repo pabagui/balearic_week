@@ -151,6 +151,61 @@ function validarFormulario (e) {
 // Me sale e siguiebte error en la consola que no entiendo, porque el html que genero igual se muestra en la página:  main.js:142 Uncaught DOMException: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node. at mensajeFinal (file:///C:/proyectos_coder/proyectojs/proyectofinaljs/js/main.js:142:21) at HTMLFormElement.validarFormulario (file:///C:/proyectos_coder/proyectojs/proyectofinaljs/js/main.js:145:5)
 
 
+const clientes = [];
+
+
+/*
+let contacto = document.getElementById('contacto');
+contacto.addEventListener('submit', guardarBase);
+
+function guardarBase(){
+
+    let name = document.getElementById('name');
+    let lastName = document.getElementById('lastName');
+    let inputEmail4 = document.getElementById('inputEmail4');
+    let inputPhone = document.getElementById('inputPhone');
+
+    localStorage.setItem( name , lastName ,inputEmail4 , inputPhone);
+}
+
+*/
+
+let contacto = document.getElementById('contacto');
+contacto.addEventListener('submit', guardarBase); 
+
+function guardarBase (e) {
+
+    e.preventDefault();
+
+    let formulario = e.target;
+
+    let name = formulario.children[1].value;
+    let lastName = formulario.children[5].value;
+    let inputEmail4 = formulario.children[9].value;
+    let inputPhone = formulario.children[13].value;
+
+    //console.log(name);
+    //console.log(lastName);
+    //console.log(inputEmail4);
+    //console.log(inputPhone);
+
+    clientes.push(name); 
+    clientes.push(lastName);
+    clientes.push(inputEmail4);
+    clientes.push(inputPhone);
+
+    //console.log(clientes);
+
+    localStorage.setItem('baseClientes' , JSON.stringify(clientes));
+
+    let base = localStorage.getItem('baseClientes');
+
+    base = JSON.parse(base);
+
+    console.log(base);
+    
+}
+
 
 
 

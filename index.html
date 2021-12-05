@@ -245,7 +245,6 @@
     <!-- sección otros servicios -->
 
     <section id="otrosservicios" class="container opcionales">
-
       <div class="container">
         <div class="row">
           <div class="col"><h2>Opcionales</h2></div>
@@ -283,44 +282,35 @@
             <a href="#simulador" class="btn btn-primary">Cotizar</a>
             <!-- sección contacto
             <button type="submit" class="btn btn-primary">Agregar</button> -->
-          </div>
-        
-          <div class="col-8"><img src="img/sup3.jpg" class="d-block w-100" alt="stand up paddle en el mar"></div>
-          
+          </div>     
+          <div class="col-8"><img src="img/sup3.jpg" class="d-block w-100" alt="stand up paddle en el mar"></div>        
         </div>
       </div>
     </section>
 
 
 <section id="simulador" class="cotizacion container opcionales">
-  <h2>Cotización</h2>
+    <h2>Cotización</h2>
+    <p>Rellena con los datos para obtener tu cotización:</p>
+    <div id="cotizar">
+      <form id="formulario">
+        <p>Escribe el número de pasajeros (máximo 9):</p>
+        <input type="number"  placeholder="Número de pasajeros">
+        <br>
+        <br>
+        <p>Elige el número del destino: 1) Ibiza y Formentera, 2) Mallorca, 3) Menorca</p>
+        <input type="number"  placeholder="Número de isla elegida">
+        <br>
+        <br>
+        <p>Elige el número del servicio extra: 1) Pick-up ida y vuelta al aeropuerto: USD$ 50, 2) Tarde de buceo: USD$ 120, 3) Stand up paddle por 2 horas: USD$ 35, 4) Ningún servicio extra</p>
+        <input type="number" name="servicioEscogido" placeholder="Número de servicio elegido">
+        <input class="btn btn-primary" type="submit" value="Cotizar-incluye impuestos">       
+      </form>
+    </div>
 
-  <p>Rellena con los datos para obtener tu cotización:</p>
-
-  <div id="cotizar">
-    <form id="formulario">
-      <p>Escribe el número de pasajeros (máximo 9):</p>
-      <input type="number"  placeholder="Número de pasajeros">
-      <br>
-      <br>
-      <p>Elige el número del destino: 1) Ibiza y Formentera, 2) Mallorca, 3) Menorca</p>
-      <input type="number"  placeholder="Número de isla elegida">
-      <br>
-      <br>
-      <p>Elige el número del servicio extra: 1) Pick-up ida y vuelta al aeropuerto: USD$ 50, 2) Tarde de buceo: USD$ 120, 3) Stand up paddle por 2 horas: USD$ 35, 4) Ningún servicio extra</p>
-      <input type="number" name="servicioEscogido" placeholder="Número de servicio elegido">
-      <input class="btn btn-primary" type="submit" value="enviar" >
-    </form>
-  </div>
-
-  <div id="imagenCotizar">
-    <img class="anteojos" src="img/anteojosplaya.jpg" alt="anteojos en la arena">
- 
-  </div>
-
-  <!--
-  <div id="imagenCotizar"><img src="img/anteojosplaya.jpg" alt="foto de relleno"></div>
--->
+    <div id="imagenCotizar">
+      <img class="anteojos" src="img/anteojosplaya.jpg" alt="anteojos en la arena">
+    </div>
   </section> 
     
 
@@ -331,10 +321,23 @@
         <!-- sección contacto -->
 
     
-    <section id="contacto" class="container contacto">
+    <section class="container contacto">
       <div>
         <h2>Contacto</h2>
-        <form class="row g-3" action="contacto.php" method="POST" enctype="multipart/form-data">
+
+        <!--
+        <form id="contacto" class="row g-3"></form>  -->
+        <!--<form class="row g-3" action="contacto.php" method="POST" enctype="multipart/form-data">-->
+
+          <!--
+          <div class="col-md-6">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="lastName">
+          </div>
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Email</label>
               <input type="email" class="form-control" id="inputEmail4">
@@ -343,6 +346,9 @@
               <label for="inputPhone" class="form-label">Teléfono</label>
               <input type="text" class="form-control" id="inputPhone">
             </div>
+
+            -->
+            <!-- 
             <div class="col-12">
               <label for="inputAddress" class="form-label">Dirección</label>
               <input type="text" class="form-control" id="inputAddress" placeholder="Av. Balear 1234">
@@ -366,6 +372,10 @@
               <label for="inputZip" class="form-label">Código Postal</label>
               <input type="text" class="form-control" id="inputZip">
             </div>
+
+            -->
+
+<!--
             <div class="col-12">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -375,15 +385,34 @@
               </div>
             </div>
             <div class="col-12">
-              <button type="submit" class="btn btn-primary">Enviar</button>
+              
+              <button type="submit" class="btn btn-primary">Enviar</button> 
             </div>
           </form>
+
+          -->
+
+          <form id="contacto" class="row g-3">
+              <label for="name" class="form-label col-md-6">Nombre</label>
+            <input type="text"  placeholder="Escribir nombre" class="col-md-6">
+            <br>
+            <br>
+            <label for="name" class="form-label col-md-6">Apellido</label>
+            <input type="text"  placeholder="Escribir apellido" class="col-md-6">
+            <br>
+            <br>
+            <label for="name" class="form-label col-md-6">Email</label>
+            <input type="email" placeholder="Escribir email" class="col-md-6">
+            <br>
+            <br>
+            <label for="name" class="form-label col-md-6">Teléfono</label>
+            <input type="text" placeholder="Escribir teléfono" class="col-md-6">
+            <br>
+            <br>
+            <input class="btn btn-primary btn-formulario" type="submit" value="Enviar">
+          </form>
         </div>
-
     </section>
-
-
-
 
 
         <!-- footer -->
@@ -396,10 +425,10 @@
                         </div>
                         <div class="col-md-4 col-lg-6 text-center  text-md-right">
                             <span>
-                                <a href="https://www.facebook.com/kepebikebags"><i class="fab fa-facebook-square fa-3x"></i></a>
+                                <a href="https://www.facebook.com"><i class="fab fa-facebook-square fa-3x"></i></a>
                             </span>
                             <span>
-                                <a href="https://www.instagram.com/kepe_bags"><i class="fab fa-instagram fa-3x"></i></a>
+                                <a href="https://www.instagram.com"><i class="fab fa-instagram fa-3x"></i></a>
                             </span>
                             <span>
                                 <a href="http://www.youtube.com"><i class="fab fa-youtube fa-3x"></i></a>

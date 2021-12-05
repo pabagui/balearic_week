@@ -52,6 +52,8 @@
   /* estilo Programas */
   body .nosotros {
     padding: 3rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
   }
 
    /* estilo Programas */
@@ -127,6 +129,7 @@ body .contacto {
     margin: 0.5em;
   }
   body .form-check {
+    margin: 1rem;
     padding: 0.5rem;
   }
   body button {
@@ -138,6 +141,14 @@ body .contacto {
     color: #2284E6;
     background-color: #A2CDE6;
   }
+
+  #contacto {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin: 0.5em;
+  }
+
   
 
 
@@ -156,7 +167,7 @@ footer div {
     font-family: "Josefin Sans", sans-serif;
     font-style: italic;
     font-size: 12px;
-    color: #e4eef8;
+    color: #2284E6;
     font-weight: bolder;
     padding-top: 3em;
     padding-left: 2em;
