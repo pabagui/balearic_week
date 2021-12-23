@@ -1,25 +1,31 @@
 /*
 
-Formato: Página HTML y  código fuente en JavaScript
-Sugerencia: Es posible asociar más de un evento a un elemento y se pueden emplear función comunes, anónimas y arrow para los manejadores de eventos.
+Formato:  Página HTML y  código fuente en JavaScript. Debe identificar el apellido del alumno/a en el nombre de archivo comprimido por “claseApellido”
+Sugerencia: Recuerda que jQuery es una librería que simplifica la notaciòn JS. Es posible reemplazar con selectores todos los mètodos nativos de acceso al DOM. Así como reemplazar toda definición de eventos de vanilla JS por on o métodos shortcut 
 
-
->> Consigna: Con lo que vimos sobre DOM, ahora puedes sumarlo a tu proyecto, para interactuar entre los elementos HTML y JS. Es decir, asociar eventos que buscamos controlar sobre los elementos  de la interfaz de nuestro simulador
-
+>> Consigna: Sumar al proyecto integrador los conceptos de jQuery que vimos en las últimas dos clases:
+-Utilizar métodos jQuery para incorporar elementos al DOM.
+-Utilizar métodos jQuery para determinar respuesta a ciertos eventos.
+>>Aspectos a incluir en el entregable: 
+Archivo HTML y Archivo JS, referenciado en el HTML por etiqueta <script src="js/miarchivo.js"></script>, que incluya la definición de un algoritmo en JavaScript con mètodos jQuery para seleccionar, agregar y definir eventos.
 >>Ejemplo:
-Cuando el usuario completa algún dato, por ejemplo cantidad de cuotas, se captura ese dato y se agregan elementos al DOM mediante JS.
-Capturar la tecla ENTER para confirmar alguna acción.
+Manejo de eventos del proyecto: clicks del usuario, cambios en inputs, selectores, etc
+Cualquier modificación que necesites hacer sobre el DOM con la página ya cargada: por ejemplo, al seleccionar una opción de un selector aparece una alerta en HTML dando cierta información.
+Capturar el evento asociado a presionar ENTER para confirmar el envío de los datos.
 
 
 */
 
+//uso de método ready de jquery
+$(() => {
+    console.log('El DOM esta listo');
+});
+
 
 const carro = [];
 
-let miFormulario = document.getElementById('formulario');
-miFormulario.addEventListener('submit', validarFormulario); //uso de eventos
-
-function validarFormulario (e) {
+let miFormulario = $('#formulario');//selector jquery
+miFormulario.submit(function (e) { //uso de evento jquery
 
     e.preventDefault();
 
@@ -127,6 +133,28 @@ function validarFormulario (e) {
     //generar html a partir de un array:
 
     function mensajeFinal () {
+      // crea un nuevo div con método append de Jquery
+
+
+      $("#cotizar").append(`<div id ="newDiv"><p>Cotizaste un viaje a ${encontradoIsla.nombre} para ${numeroPasajeros} personas, contratando ${encontradoServicio.nombre} por un total de USD$ ${precioTotal}  .\n Para más información llena el formulario de contacto y nos comunicaremos a la brevedad contigo</p></div>`);
+
+      
+      
+      $("#newDiv").css("color", "#2284E6"); //uso de método css de jquery
+      $("#newDiv").css("fontSize", "1.5rem");
+      $("#newDiv").css("padding", "4rem");
+      
+      //opcion.appendChild(newDiv); //añade texto al div creado.
+    
+      // añade el elemento creado y su contenido al DOM
+     // let currentDiv = document.getElementById("imagenCotizar");
+      //document.body.insertBefore(newDiv, currentDiv);
+    }
+    
+    mensajeFinal ();
+
+    /*
+    function mensajeFinal () {
       // crea un nuevo div
       // y añade contenido
       let opcion = document.getElementById("cotizar");// acá hice un cambio
@@ -144,11 +172,18 @@ function validarFormulario (e) {
     }
     
     mensajeFinal ();
+
+    */
     
 
-}
 
-// Me sale e siguiebte error en la consola que no entiendo, porque el html que genero igual se muestra en la página:  main.js:142 Uncaught DOMException: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node. at mensajeFinal (file:///C:/proyectos_coder/proyectojs/proyectofinaljs/js/main.js:142:21) at HTMLFormElement.validarFormulario (file:///C:/proyectos_coder/proyectojs/proyectofinaljs/js/main.js:145:5)
+
+
+}); //uso de eventos
+
+
+
+// Me sale e siguiente error en la consola que no entiendo, porque el html que genero igual se muestra en la página:  main.js:142 Uncaught DOMException: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node. at mensajeFinal (file:///C:/proyectos_coder/proyectojs/proyectofinaljs/js/main.js:142:21) at HTMLFormElement.validarFormulario (file:///C:/proyectos_coder/proyectojs/proyectofinaljs/js/main.js:145:5)
 
 
 const clientes = [];
@@ -170,10 +205,8 @@ function guardarBase(){
 
 */
 
-let contacto = document.getElementById('contacto');
-contacto.addEventListener('submit', guardarBase); 
-
-function guardarBase (e) {
+let contacto = $('#contacto'); //uso de selector jquery
+contacto.submit(function (e) { //uso de evento jquery
 
     e.preventDefault();
 
@@ -204,7 +237,7 @@ function guardarBase (e) {
 
     console.log(base);
     
-}
+})
 
 
 
