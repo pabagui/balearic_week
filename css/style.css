@@ -20,8 +20,18 @@
     padding: 3rem;
   }
 
-  
+  #mostrarCarousel {
+    margin-top: 4rem;
+    margin-left: 35rem;
+  }
    /* estilo carousel */
+
+   
+   #carouselExampleDark {
+     display: none;
+   }
+
+
    main img {
     height: auto;
     width: 75%;

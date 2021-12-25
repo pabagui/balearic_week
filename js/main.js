@@ -1,25 +1,40 @@
 /*
 
-Formato:  Página HTML y  código fuente en JavaScript. Debe identificar el apellido del alumno/a en el nombre de archivo comprimido por “claseApellido”
-Sugerencia: Recuerda que jQuery es una librería que simplifica la notaciòn JS. Es posible reemplazar con selectores todos los mètodos nativos de acceso al DOM. Así como reemplazar toda definición de eventos de vanilla JS por on o métodos shortcut 
+Formato: código fuente en JavaScript
+Sublime Text o VisualStudio.  
+Sugerencia: ten en cuenta que los métodos de jQuery show, hide, fadeIn, fadeOut, slideUp, slideDown y toggle ofrecen animaciones con comportamiento predefinido. Si quieres armar tus propias animaciones, deberás usar animate.
+También recuerda que los métodos jQuery pueden encadenarse: 
+http://www.w3big.com/es/jquery/jquery-chaining.html
 
->> Consigna: Sumar al proyecto integrador los conceptos de jQuery que vimos en las últimas dos clases:
--Utilizar métodos jQuery para incorporar elementos al DOM.
--Utilizar métodos jQuery para determinar respuesta a ciertos eventos.
->>Aspectos a incluir en el entregable: 
-Archivo HTML y Archivo JS, referenciado en el HTML por etiqueta <script src="js/miarchivo.js"></script>, que incluya la definición de un algoritmo en JavaScript con mètodos jQuery para seleccionar, agregar y definir eventos.
->>Ejemplo:
-Manejo de eventos del proyecto: clicks del usuario, cambios en inputs, selectores, etc
-Cualquier modificación que necesites hacer sobre el DOM con la página ya cargada: por ejemplo, al seleccionar una opción de un selector aparece una alerta en HTML dando cierta información.
-Capturar el evento asociado a presionar ENTER para confirmar el envío de los datos.
+>> Consigna: codifica animaciones concatenadas sobre uno o más elementos. Es decir que luego de finalizar una animación en su función callback, se especifica la llamada a otra animación.
+>>Aspectos a incluir en el entregable:
+Archivo HTML y archivo JavaScript referenciado, que incluya la definición de dos o más animaciones y sus respectivas funciones callback.
+>>Ejemplo de secuencia de animación:
+1) Mostrar un elemento con fadeIn() y al concluir su transición, ocultar otro elemento con fadeOut(). 
+2) Aumentar el margen de un elemento con animate() y al concluir su transición, disminuir el margen del mismo elemento con animate().
+3) Disminuir la altura de un elemento con animate() y al concluir su transición, esperar con delay() unos ms, y volver al tamaño original.
 
 
 */
+
+
 
 //uso de método ready de jquery
 $(() => {
     console.log('El DOM esta listo');
 });
+
+//uso de animación Jquery
+$('#mostrarCarousel').on('click', function () {
+    $("#carouselExampleDark").fadeIn(3000);
+});
+
+
+/*
+$("#mostrarCarousel").click(function () { 
+    $("#carouselExampleDark").show();
+});
+*/
 
 
 const carro = [];
@@ -133,16 +148,25 @@ miFormulario.submit(function (e) { //uso de evento jquery
     //generar html a partir de un array:
 
     function mensajeFinal () {
-      // crea un nuevo div con método append de Jquery
+      // crea un nuevo div con método append de Jquery y uso de animaciones
 
 
       $("#cotizar").append(`<div id ="newDiv"><p>Cotizaste un viaje a ${encontradoIsla.nombre} para ${numeroPasajeros} personas, contratando ${encontradoServicio.nombre} por un total de USD$ ${precioTotal}  .\n Para más información llena el formulario de contacto y nos comunicaremos a la brevedad contigo</p></div>`);
 
-      
-      
+      /*
       $("#newDiv").css("color", "#2284E6"); //uso de método css de jquery
       $("#newDiv").css("fontSize", "1.5rem");
       $("#newDiv").css("padding", "4rem");
+      */
+      $("#newDiv").css("color", "#2284E6")
+                  .css("fontSize", "1.5rem")
+                  .css("padding", "4rem")
+                  .slideUp(10)
+                  //.delay("fast")
+                  .slideDown(4000);
+ 
+                  
+
       
       //opcion.appendChild(newDiv); //añade texto al div creado.
     
@@ -238,6 +262,7 @@ contacto.submit(function (e) { //uso de evento jquery
     console.log(base);
     
 })
+
 
 
 
