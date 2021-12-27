@@ -266,7 +266,159 @@ contacto.submit(function (e) { //uso de evento jquery
 
 
 
+//API geolocalización
 
+let ubicacion = navigator.geolocation.getCurrentPosition( mostrarUbicacion);
+
+function mostrarUbicacion ( position ) {
+
+    console.log(position.coords.latitude);
+    console.log(position.coords.longitude);
+    console.log(position.coords.latitude , position.coords.longitude);
+    
+}
+
+//$("#climaIbiza").on("click" , mostrarUbicacion); no se escribe este click porque funcion tiene un callbck especial que lo muestra
+
+//API CLIMA
+
+let urlClimaIbiza = "http://api.openweathermap.org/data/2.5/weather?q=Ibiza&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
+
+$("#climaIbiza").click(function(){
+
+    $.get( urlClimaIbiza , function(data){
+        
+        console.log(data);
+        console.log(data.weather[0].description);
+        let iconoClima = data.weather[0].icon;
+        let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
+        
+
+        let contenido = `<div>
+                            <h3>${data.name}</h3>
+                            <h3>${data.main.temp.toFixed(0)}°C</h3>
+                            <img src="${iconoUrl}">
+                            <p>Pronóstico: ${data.weather[0].description}</p>
+                            <p>Temp máx: ${data.main.temp_max.toFixed(0)}°C</p>
+                            <p>Temp mín: ${data.main.temp_min.toFixed(0)}°C</p>   
+                        </div>`
+        
+             $("#formentera").append(contenido);   
+
+ })
+
+})
+
+
+/*
+let climaAJAX = $.ajax({
+
+    url: "http://api.openweathermap.org/data/2.5/weather",
+    type: "GET",
+    data:{
+        q:'Ibiza',
+        appid: '85af83e8354fd0cc1b31c0b7abbbf37a',
+        dataType: 'json',
+        units: "metric"
+    },
+
+    success: function(data){
+
+        console.log(data);
+
+    }
+
+})
+
+console.log(climaAJAX);
+
+*/
+
+
+let urlClimaFormentera = "http://api.openweathermap.org/data/2.5/weather?lat=38.7191&lon=1.4587&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
+
+$("#climaFormentera").click(function(){
+
+    $.get( urlClimaFormentera , function(data){
+        
+        console.log(data);
+        console.log(data.weather[0].description);
+        let iconoClima = data.weather[0].icon;
+        let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
+        
+
+        let contenido = `<div>
+                            <h3>${data.name}</h3>
+                            <h3>${data.main.temp.toFixed(0)}°C</h3>
+                            <img src="${iconoUrl}">
+                            <p>Pronóstico: ${data.weather[0].description}</p>
+                            <p>Temp máx: ${data.main.temp_max.toFixed(0)}°C</p>
+                            <p>Temp mín: ${data.main.temp_min.toFixed(0)}°C</p>   
+                        </div>`
+        
+             $("#formentera").append(contenido);   
+
+ })
+
+})
+
+
+
+let urlClimaMallorca = "http://api.openweathermap.org/data/2.5/weather?q=Palma&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
+
+$("#climaMallorca").click(function(){
+
+    $.get( urlClimaMallorca , function(data){
+        
+        console.log(data);
+        console.log(data.weather[0].description);
+        let iconoClima = data.weather[0].icon;
+        let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
+        
+
+        let contenido = `<div>
+                            <h3>${data.name}</h3>
+                            <h3>${data.main.temp.toFixed(0)}°C</h3>
+                            <img src="${iconoUrl}">
+                            <p>Pronóstico: ${data.weather[0].description}</p>
+                            <p>Temp máx: ${data.main.temp_max.toFixed(0)}°C</p>
+                            <p>Temp mín: ${data.main.temp_min.toFixed(0)}°C</p>   
+                        </div>`
+        
+             $("#mallorca").append(contenido);   
+
+ })
+
+})
+
+
+
+let urlClimaMenorca = "http://api.openweathermap.org/data/2.5/weather?lat=39.9997&lon=3.835&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
+
+$("#climaMenorca").click(function(){
+
+    $.get( urlClimaMenorca , function(data){
+        
+        console.log(data);
+        console.log(data.weather[0].description);
+        let iconoClima = data.weather[0].icon;
+        let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
+        
+
+        let contenido = `<div>
+                            <h3>${data.name}</h3>
+                            <h3>${data.main.temp.toFixed(0)}°C</h3>
+                            <img src="${iconoUrl}">
+                            <p>Pronóstico: ${data.weather[0].description}</p>
+                            <p>Temp máx: ${data.main.temp_max.toFixed(0)}°C</p>
+                            <p>Temp mín: ${data.main.temp_min.toFixed(0)}°C</p>   
+                        </div>`
+        
+             $("#menorca").append(contenido);   
+
+ })
+
+})
 
 
 
