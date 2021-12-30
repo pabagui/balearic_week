@@ -294,7 +294,7 @@ $("#climaIbiza").click(function(){
         let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
-        let contenido = `<div id="climaIslas">
+        let contenido = `<div id="climaIsla1">
                             <h3>${data.name}</h3>
                             <h3>${data.main.temp.toFixed(0)}°C</h3>
                             <img src="${iconoUrl}">
@@ -305,7 +305,7 @@ $("#climaIbiza").click(function(){
         
              $("#formentera").append(contenido);
 
-             $("#climaIslas").css("color", "#2284E6") //uso de css en clima
+             $("#climaIsla1").css("color", "#2284E6") //uso de css en clima
                              .css("fontSize", "1rem")
                              .css("padding", "4rem")
                              .slideUp(5)
@@ -354,7 +354,7 @@ $("#climaFormentera").click(function(){
         let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
-        let contenido = `<div id="climaIslas">
+        let contenido = `<div id="climaIsla2">
                             <h3>${data.name}</h3>
                             <h3>${data.main.temp.toFixed(0)}°C</h3>
                             <img src="${iconoUrl}">
@@ -365,7 +365,7 @@ $("#climaFormentera").click(function(){
         
              $("#formentera").append(contenido); 
 
-             $("#climaIslas").css("color", "#2284E6") //uso de css en clima
+             $("#climaIsla2").css("color", "#2284E6") //uso de css en clima
                              .css("fontSize", "1rem")
                              .css("padding", "4rem")
                              .slideUp(5)
@@ -392,7 +392,7 @@ $("#climaMallorca").click(function(){
         let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
-        let contenido = `<div id="climaIslas">
+        let contenido = `<div id="climaIsla3">
                             <h3>${data.name}</h3>
                             <h3>${data.main.temp.toFixed(0)}°C</h3>
                             <img src="${iconoUrl}">
@@ -403,7 +403,7 @@ $("#climaMallorca").click(function(){
         
              $("#mallorca").append(contenido);
 
-             $("#climaIslas").css("color", "#2284E6") //uso de css en clima
+             $("#climaIsla3").css("color", "#2284E6") //uso de css en clima
                              .css("fontSize", "1rem")
                              .css("padding", "4rem")
                              .slideUp(5)
@@ -429,7 +429,7 @@ $("#climaMenorca").click(function(){
         let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
-        let contenido = `<div id="climaIslas">
+        let contenido = `<div id="climaIsla4">
                             <h3>${data.name}</h3>
                             <h3>${data.main.temp.toFixed(0)}°C</h3>
                             <img src="${iconoUrl}">
@@ -440,7 +440,7 @@ $("#climaMenorca").click(function(){
         
              $("#menorca").append(contenido);
 
-             $("#climaIslas").css("color", "#2284E6") //uso de css en clima
+             $("#climaIsla4").css("color", "#2284E6") //uso de css en clima
                              .css("fontSize", "1rem")
                              .css("padding", "4rem")
                              .slideUp(5)
