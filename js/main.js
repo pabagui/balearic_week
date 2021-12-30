@@ -294,7 +294,7 @@ $("#climaIbiza").click(function(){
         let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
-        let contenido = `<div>
+        let contenido = `<div id="climaIslas">
                             <h3>${data.name}</h3>
                             <h3>${data.main.temp.toFixed(0)}°C</h3>
                             <img src="${iconoUrl}">
@@ -303,7 +303,14 @@ $("#climaIbiza").click(function(){
                             <p>Temp mín: ${data.main.temp_min.toFixed(0)}°C</p>   
                         </div>`
         
-             $("#formentera").append(contenido);   
+             $("#formentera").append(contenido);
+
+             $("#climaIslas").css("color", "#2284E6") //uso de css en clima
+                             .css("fontSize", "1rem")
+                             .css("padding", "4rem")
+                             .slideUp(5)
+                             //.delay("fast")
+                             .slideDown(3000);   
 
  })
 
@@ -347,7 +354,7 @@ $("#climaFormentera").click(function(){
         let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
-        let contenido = `<div>
+        let contenido = `<div id="climaIslas">
                             <h3>${data.name}</h3>
                             <h3>${data.main.temp.toFixed(0)}°C</h3>
                             <img src="${iconoUrl}">
@@ -356,7 +363,16 @@ $("#climaFormentera").click(function(){
                             <p>Temp mín: ${data.main.temp_min.toFixed(0)}°C</p>   
                         </div>`
         
-             $("#formentera").append(contenido);   
+             $("#formentera").append(contenido); 
+
+             $("#climaIslas").css("color", "#2284E6") //uso de css en clima
+                             .css("fontSize", "1rem")
+                             .css("padding", "4rem")
+                             .slideUp(5)
+                             //.delay("fast")
+                             .slideDown(3000);
+                             
+ 
 
  })
 
@@ -376,7 +392,7 @@ $("#climaMallorca").click(function(){
         let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
-        let contenido = `<div>
+        let contenido = `<div id="climaIslas">
                             <h3>${data.name}</h3>
                             <h3>${data.main.temp.toFixed(0)}°C</h3>
                             <img src="${iconoUrl}">
@@ -385,7 +401,15 @@ $("#climaMallorca").click(function(){
                             <p>Temp mín: ${data.main.temp_min.toFixed(0)}°C</p>   
                         </div>`
         
-             $("#mallorca").append(contenido);   
+             $("#mallorca").append(contenido);
+
+             $("#climaIslas").css("color", "#2284E6") //uso de css en clima
+                             .css("fontSize", "1rem")
+                             .css("padding", "4rem")
+                             .slideUp(5)
+                             //.delay("fast")
+                             .slideDown(3000);
+
 
  })
 
@@ -405,7 +429,7 @@ $("#climaMenorca").click(function(){
         let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
-        let contenido = `<div>
+        let contenido = `<div id="climaIslas">
                             <h3>${data.name}</h3>
                             <h3>${data.main.temp.toFixed(0)}°C</h3>
                             <img src="${iconoUrl}">
@@ -414,7 +438,15 @@ $("#climaMenorca").click(function(){
                             <p>Temp mín: ${data.main.temp_min.toFixed(0)}°C</p>   
                         </div>`
         
-             $("#menorca").append(contenido);   
+             $("#menorca").append(contenido);
+
+             $("#climaIslas").css("color", "#2284E6") //uso de css en clima
+                             .css("fontSize", "1rem")
+                             .css("padding", "4rem")
+                             .slideUp(5)
+                             //.delay("fast")
+                             .slideDown(3000);
+  
 
  })
 
