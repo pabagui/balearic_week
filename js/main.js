@@ -259,9 +259,16 @@ contacto.submit(function (e) { //uso de evento jquery
 
     base = JSON.parse(base);
 
-    console.log(base);
+    console.log(base);  
+    //base = [];
+
+    //clientes = [];
+
     
 })
+
+
+
 
 
 
@@ -363,7 +370,8 @@ $("#climaFormentera").click(function(){
                             <p>Temp mín: ${data.main.temp_min.toFixed(0)}°C</p>   
                         </div>`
         
-             $("#formentera").append(contenido); 
+             $("#formentera").append(contenido);                                          
+             //$("#formentera").innerHTML = contenido; 
 
              $("#climaIsla2").css("color", "#2284E6") //uso de css en clima
                              .css("fontSize", "1rem")
