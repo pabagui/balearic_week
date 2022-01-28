@@ -150,6 +150,7 @@ body .contacto {
   body .btn {
     color: #2284E6;
     background-color: #A2CDE6;
+    margin: 0.5rem;
   }
 
   #contacto {
@@ -158,6 +159,11 @@ body .contacto {
     padding: 0.5em;
     margin: 0.5em;
   }
+
+  body .fotosup {
+    padding: 1rem;
+  }
+  
 
   
 

@@ -1,23 +1,3 @@
-/*
-
-Formato: código fuente en JavaScript
-Sublime Text o VisualStudio.  
-Sugerencia: ten en cuenta que los métodos de jQuery show, hide, fadeIn, fadeOut, slideUp, slideDown y toggle ofrecen animaciones con comportamiento predefinido. Si quieres armar tus propias animaciones, deberás usar animate.
-También recuerda que los métodos jQuery pueden encadenarse: 
-http://www.w3big.com/es/jquery/jquery-chaining.html
-
->> Consigna: codifica animaciones concatenadas sobre uno o más elementos. Es decir que luego de finalizar una animación en su función callback, se especifica la llamada a otra animación.
->>Aspectos a incluir en el entregable:
-Archivo HTML y archivo JavaScript referenciado, que incluya la definición de dos o más animaciones y sus respectivas funciones callback.
->>Ejemplo de secuencia de animación:
-1) Mostrar un elemento con fadeIn() y al concluir su transición, ocultar otro elemento con fadeOut(). 
-2) Aumentar el margen de un elemento con animate() y al concluir su transición, disminuir el margen del mismo elemento con animate().
-3) Disminuir la altura de un elemento con animate() y al concluir su transición, esperar con delay() unos ms, y volver al tamaño original.
-
-
-*/
-
-
 
 //uso de método ready de jquery
 $(() => {
@@ -28,13 +8,6 @@ $(() => {
 $('#mostrarCarousel').on('click', function () {
     $("#carouselExampleDark").fadeIn(3000);
 });
-
-
-/*
-$("#mostrarCarousel").click(function () { 
-    $("#carouselExampleDark").show();
-});
-*/
 
 
 const carro = [];
@@ -153,81 +126,22 @@ miFormulario.submit(function (e) { //uso de evento jquery
 
       $("#cotizar").append(`<div id ="newDiv"><p>Cotizaste un viaje a ${encontradoIsla.nombre} para ${numeroPasajeros} personas, contratando ${encontradoServicio.nombre} por un total de USD$ ${precioTotal}  .\n Para más información llena el formulario de contacto y nos comunicaremos a la brevedad contigo</p></div>`);
 
-      /*
-      $("#newDiv").css("color", "#2284E6"); //uso de método css de jquery
-      $("#newDiv").css("fontSize", "1.5rem");
-      $("#newDiv").css("padding", "4rem");
-      */
+
       $("#newDiv").css("color", "#2284E6")
                   .css("fontSize", "1.5rem")
                   .css("padding", "4rem")
                   .slideUp(10)
-                  //.delay("fast")
                   .slideDown(4000);
  
-                  
-
-      
-      //opcion.appendChild(newDiv); //añade texto al div creado.
-    
-      // añade el elemento creado y su contenido al DOM
-     // let currentDiv = document.getElementById("imagenCotizar");
-      //document.body.insertBefore(newDiv, currentDiv);
     }
     
     mensajeFinal ();
-
-    /*
-    function mensajeFinal () {
-      // crea un nuevo div
-      // y añade contenido
-      let opcion = document.getElementById("cotizar");// acá hice un cambio
-      let newDiv = document.createElement("div");
-      newDiv.innerHTML = `<p>Cotizaste un viaje a ${encontradoIsla.nombre} para ${numeroPasajeros} personas, contratando ${encontradoServicio.nombre} por un total de USD$ ${precioTotal}  .\n Para más información llena el formulario de contacto y nos comunicaremos a la brevedad contigo</p>`;
-      newDiv.style.color = "blue";
-      newDiv.style.fontSize = "1.5rem";
-      newDiv.style.padding = "4rem";
-      
-      opcion.appendChild(newDiv); //añade texto al div creado.
-    
-      // añade el elemento creado y su contenido al DOM
-      let currentDiv = document.getElementById("imagenCotizar");
-      document.body.insertBefore(newDiv, currentDiv);
-    }
-    
-    mensajeFinal ();
-
-    */
-    
-
-
-
 
 }); //uso de eventos
 
 
 
-// Me sale e siguiente error en la consola que no entiendo, porque el html que genero igual se muestra en la página:  main.js:142 Uncaught DOMException: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node. at mensajeFinal (file:///C:/proyectos_coder/proyectojs/proyectofinaljs/js/main.js:142:21) at HTMLFormElement.validarFormulario (file:///C:/proyectos_coder/proyectojs/proyectofinaljs/js/main.js:145:5)
-
-
 const clientes = [];
-
-
-/*
-let contacto = document.getElementById('contacto');
-contacto.addEventListener('submit', guardarBase);
-
-function guardarBase(){
-
-    let name = document.getElementById('name');
-    let lastName = document.getElementById('lastName');
-    let inputEmail4 = document.getElementById('inputEmail4');
-    let inputPhone = document.getElementById('inputPhone');
-
-    localStorage.setItem( name , lastName ,inputEmail4 , inputPhone);
-}
-
-*/
 
 let contacto = $('#contacto'); //uso de selector jquery
 contacto.submit(function (e) { //uso de evento jquery
@@ -260,10 +174,6 @@ contacto.submit(function (e) { //uso de evento jquery
     base = JSON.parse(base);
 
     console.log(base);  
-    //base = [];
-
-    //clientes = [];
-
     
 })
 
@@ -285,7 +195,7 @@ function mostrarUbicacion ( position ) {
     
 }
 
-//$("#climaIbiza").on("click" , mostrarUbicacion); no se escribe este click porque funcion tiene un callbck especial que lo muestra
+
 
 //API CLIMA
 
@@ -316,37 +226,12 @@ $("#climaIbiza").click(function(){
                              .css("fontSize", "1rem")
                              .css("padding", "4rem")
                              .slideUp(5)
-                             //.delay("fast")
                              .slideDown(3000);   
 
  })
 
 })
 
-
-/*
-let climaAJAX = $.ajax({
-
-    url: "http://api.openweathermap.org/data/2.5/weather",
-    type: "GET",
-    data:{
-        q:'Ibiza',
-        appid: '85af83e8354fd0cc1b31c0b7abbbf37a',
-        dataType: 'json',
-        units: "metric"
-    },
-
-    success: function(data){
-
-        console.log(data);
-
-    }
-
-})
-
-console.log(climaAJAX);
-
-*/
 
 
 let urlClimaFormentera = "http://api.openweathermap.org/data/2.5/weather?lat=38.7191&lon=1.4587&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
@@ -371,13 +256,11 @@ $("#climaFormentera").click(function(){
                         </div>`
         
              $("#formentera").append(contenido);                                          
-             //$("#formentera").innerHTML = contenido; 
 
              $("#climaIsla2").css("color", "#2284E6") //uso de css en clima
                              .css("fontSize", "1rem")
                              .css("padding", "4rem")
                              .slideUp(5)
-                             //.delay("fast")
                              .slideDown(3000);
                              
  
@@ -415,7 +298,6 @@ $("#climaMallorca").click(function(){
                              .css("fontSize", "1rem")
                              .css("padding", "4rem")
                              .slideUp(5)
-                             //.delay("fast")
                              .slideDown(3000);
 
 
@@ -452,7 +334,6 @@ $("#climaMenorca").click(function(){
                              .css("fontSize", "1rem")
                              .css("padding", "4rem")
                              .slideUp(5)
-                             //.delay("fast")
                              .slideDown(3000);
   
 
