@@ -199,7 +199,7 @@ function mostrarUbicacion ( position ) {
 
 //API CLIMA
 
-let urlClimaIbiza = "http://api.openweathermap.org/data/2.5/weather?q=Ibiza&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
+let urlClimaIbiza = "https://api.openweathermap.org/data/2.5/weather?q=Ibiza&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
 
 $("#climaIbiza").click(function(){
 
@@ -208,7 +208,7 @@ $("#climaIbiza").click(function(){
         console.log(data);
         console.log(data.weather[0].description);
         let iconoClima = data.weather[0].icon;
-        let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
+        let iconoUrl = "https://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
         let contenido = `<div id="climaIsla1">
@@ -234,7 +234,7 @@ $("#climaIbiza").click(function(){
 
 
 
-let urlClimaFormentera = "http://api.openweathermap.org/data/2.5/weather?lat=38.7191&lon=1.4587&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
+let urlClimaFormentera = "https://api.openweathermap.org/data/2.5/weather?lat=38.7191&lon=1.4587&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
 
 $("#climaFormentera").click(function(){
 
@@ -243,7 +243,7 @@ $("#climaFormentera").click(function(){
         console.log(data);
         console.log(data.weather[0].description);
         let iconoClima = data.weather[0].icon;
-        let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
+        let iconoUrl = "https://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
         let contenido = `<div id="climaIsla2">
@@ -271,7 +271,7 @@ $("#climaFormentera").click(function(){
 
 
 
-let urlClimaMallorca = "http://api.openweathermap.org/data/2.5/weather?q=Palma&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
+let urlClimaMallorca = "https://api.openweathermap.org/data/2.5/weather?q=Palma&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
 
 $("#climaMallorca").click(function(){
 
@@ -280,7 +280,7 @@ $("#climaMallorca").click(function(){
         console.log(data);
         console.log(data.weather[0].description);
         let iconoClima = data.weather[0].icon;
-        let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
+        let iconoUrl = "https://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
         let contenido = `<div id="climaIsla3">
@@ -307,7 +307,7 @@ $("#climaMallorca").click(function(){
 
 
 
-let urlClimaMenorca = "http://api.openweathermap.org/data/2.5/weather?lat=39.9997&lon=3.835&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
+let urlClimaMenorca = "https://api.openweathermap.org/data/2.5/weather?lat=39.9997&lon=3.835&units=metric&appid=85af83e8354fd0cc1b31c0b7abbbf37a&lang=es";
 
 $("#climaMenorca").click(function(){
 
@@ -316,7 +316,7 @@ $("#climaMenorca").click(function(){
         console.log(data);
         console.log(data.weather[0].description);
         let iconoClima = data.weather[0].icon;
-        let iconoUrl = "http://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
+        let iconoUrl = "https://openweathermap.org/img/wn/" + iconoClima + "@2x.png";
         
 
         let contenido = `<div id="climaIsla4">
